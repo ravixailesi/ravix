@@ -766,3 +766,76 @@ nav a.active {
 @media (max-width: 900px) {
     .standalone-page { padding-top: 120px; }
 }
+
+/* Ravix arka plan müziği */
+.ravix-music-toggle {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9998;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid rgba(245, 176, 22, 0.45);
+    border-radius: 999px;
+    background: rgba(10, 11, 14, 0.88);
+    color: #c8c8c8;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ravix-music-toggle:hover {
+    transform: translateY(-2px);
+    border-color: var(--theme-gold);
+    color: #fff;
+}
+
+.ravix-music-toggle.is-playing {
+    color: var(--theme-gold);
+    border-color: rgba(245, 176, 22, 0.8);
+    box-shadow: 0 0 18px rgba(245, 176, 22, 0.16), 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.ravix-music-toggle.is-playing i {
+    animation: ravixMusicPulse 1.6s ease-in-out infinite;
+}
+
+/* YouTube oynatıcı yalnızca ses kaynağı olarak kullanılır. */
+.ravix-music-player,
+.ravix-music-player iframe {
+    position: fixed !important;
+    left: -220px !important;
+    bottom: 0 !important;
+    width: 200px !important;
+    height: 200px !important;
+    opacity: 0.01 !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
+@keyframes ravixMusicPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+@media (max-width: 600px) {
+    .ravix-music-toggle {
+        right: 12px;
+        bottom: 12px;
+        min-height: 40px;
+        padding: 0 12px;
+    }
+
+    .ravix-music-toggle span {
+        display: none;
+    }
+}
