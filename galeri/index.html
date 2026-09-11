@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ravix Ailesi - Metin2 loncası resmi web sitesi">
+    <title>Galeri | Ravix Ailesi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700;800&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+        <a class="logo" href="../">RAVİX AİLESİ</a>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Menüyü aç/kapat"><i class="fa-solid fa-bars"></i></button>
+        <nav id="navMenu">
+            <a href="../" onclick="closeMobileMenu()">ANA SAYFA</a>
+            <a href="../hakkimizda/" onclick="closeMobileMenu()">HAKKIMIZDA</a>
+            <a href="../oyuncularimiz/" onclick="closeMobileMenu()">OYUNCULARIMIZ</a>
+            <a href="../galeri/" class="active" onclick="closeMobileMenu()">GALERİ</a>
+            <a href="../video/" onclick="closeMobileMenu()">VİDEO</a>
+            <a href="../iletisim/" onclick="closeMobileMenu()">İLETİŞİM</a>
+        </nav>
+        <div class="header-socials">
+            <a href="https://discord.gg/ravix" target="_blank" class="h-badge discord"><i class="fa-brands fa-discord"></i> Discord</a>
+            <a href="https://chat.whatsapp.com/L6gztVWYA5hFtKULUhDl1Z" target="_blank" class="h-badge whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.instagram.com/ravixailesi/" target="_blank" class="h-badge instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </div>
+    </header>
+<main>
+<section class="gallery-section standalone-page">
+<div class="section-header">
+<h2 class="main-section-title">Galeri</h2>
+<p class="section-desc">Lonca savaşlarımızdan, boss kesimlerinden ve unutulmaz anlardan kareler.</p>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item">
+<img alt="Savaş Anı" src="../lonca1.jpg"/>
+<div class="gallery-overlay">Lonca Savaşı Buluşması</div>
+</div>
+<div class="gallery-item">
+<img alt="Boss Kesimi" src="../lonca2.jpg"/>
+<div class="gallery-overlay">Duvar Kağıdı</div>
+</div>
+<div class="gallery-item">
+<img alt="Kutlama" src="../lonca3.jpg"/>
+<div class="gallery-overlay">Zafer Kutlaması</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2024 - 2026 Ravix Ailesi. Tüm hakları saklıdır. | www.ravix.com | Developer discord @alazoflaz</p>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>
